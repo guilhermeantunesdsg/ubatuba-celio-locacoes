@@ -1,0 +1,6 @@
+.DS_Store
+# arquivos originais e pacotes que não vão para o site
+drive-download-*/
+*.zip
+23c4b3a9-e721-4923-a7fb-c2c0e4903dfe.jpeg
+a252865c-789f-4896-aea7-1f5d8537a6df.jpeg

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ubatuba Célio Locações</title>
+<meta name="description" content="Casas, apartamentos e kitnets para temporada na Praia Grande, em Ubatuba/SP. Escolha a sua e reserve direto com o proprietário pelo WhatsApp.">
+<link rel="icon" href="brand/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+<!--STYLE--><link rel="stylesheet" href="css/style.css"><!--/STYLE-->
+</head>
+<body>
+
+<header class="topbar" id="topo">
+  <div class="wrap topbar__in">
+    <a href="#topo" class="brand" aria-label="Ubatuba Célio Locações — início">
+      <img src="brand/logo.png" alt="Ubatuba Célio Locações" width="344" height="425">
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#acomodacoes">Acomodações</a>
+      <a href="#como-reservar">Como reservar</a>
+      <a href="#praia-grande">Localização</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn--wa btn--sm" href="#" data-wa="Olá! Vim pelo site e gostaria de informações sobre locação para temporada em Ubatuba.">
+      <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Falar no WhatsApp
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero__img" src="img/hero-ubatuba.jpg" alt="Nascer do sol na praia de Ubatuba" fetchpriority="high">
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="wrap hero__in">
+    <p class="eyebrow">Ubatuba · Praia Grande · SP</p>
+    <h1>Suas férias em Ubatuba, a poucos passos do mar.</h1>
+    <p class="lead">Casas para grandes grupos, apartamentos e kitnets na Praia Grande. Escolha a sua e reserve direto com o proprietário.</p>
+    <div class="hero__cta">
+      <a href="#" class="btn btn--wa btn--xl" data-wa="Olá! Vim pelo site e gostaria de informações sobre locação para temporada em Ubatuba.">
+        <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Reservar pelo WhatsApp
+      </a>
+      <a href="#acomodacoes" class="btn btn--glass btn--xl">Ver acomodações</a>
+    </div>
+  </div>
+</section>
+
+<section class="numbers" aria-label="Números da Célio Locações">
+  <div class="wrap numbers__in">
+    <div class="num"><b><i data-to="15">15</i></b><span>acomodações para escolher</span></div>
+    <div class="num"><b>até <i data-to="50">50</i></b><span>pessoas em uma só casa</span></div>
+    <div class="num"><b><i data-to="100">100</i> m</b><span>do mar em várias opções</span></div>
+    <div class="num num--hl"><b>+<i data-to="10000" data-final="10 mil">10 mil</i></b><span>hóspedes já passaram por aqui</span></div>
+  </div>
+</section>
+
+<section class="sec" id="acomodacoes">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow eyebrow--dark">Nossas acomodações</p>
+      <h2>Escolha o lugar ideal para a sua temporada</h2>
+      <p class="muted">Cada acomodação tem seu próprio botão de WhatsApp: a mensagem já vai pronta, é só informar as datas.</p>
+    </div>
+
+    <div class="filters" id="filters">
+      <div class="filters__row">
+        <div class="filters__group" role="group" aria-label="Tipo de acomodação">
+          <button class="chip is-on" data-tipo="todos">Todas as acomodações</button>
+          <button class="chip" data-tipo="casa">Casas</button>
+          <button class="chip" data-tipo="apto">Apartamentos</button>
+          <button class="chip" data-tipo="kitnet">Kitnets</button>
+        </div>
+        <label class="filters__people" for="pessoas">
+          <span>Quantas pessoas?</span>
+          <select id="pessoas">
+            <option value="0">Todas as acomodações</option>
+            <option value="2">2 pessoas</option>
+            <option value="4">4 pessoas</option>
+            <option value="5">5 pessoas</option>
+            <option value="6">6 pessoas</option>
+            <option value="8">8 pessoas</option>
+            <option value="10">10 pessoas</option>
+            <option value="12">12 pessoas</option>
+            <option value="15">15 pessoas</option>
+            <option value="18">18 pessoas</option>
+            <option value="20">20 pessoas</option>
+            <option value="22">22 pessoas</option>
+            <option value="25">25 pessoas</option>
+            <option value="30">30 pessoas</option>
+            <option value="40">40 pessoas</option>
+            <option value="50">50 pessoas</option>
+          </select>
+        </label>
+      </div>
+      <p class="count" id="count" aria-live="polite"></p>
+    </div>
+
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden>Nenhuma acomodação encontrada para esse filtro. <a href="#" data-wa="Olá! Não encontrei no site a acomodação ideal para o meu grupo. Podem me ajudar?">Fale com o proprietário</a> e ele indica a melhor opção.</p>
+  </div>
+</section>
+
+<section class="alert" aria-label="Aviso de alta temporada">
+  <div class="wrap alert__in">
+    <div class="alert__txt">
+      <p class="alert__tag">Alta temporada</p>
+      <p class="alert__msg"><strong>Em alta temporada, é difícil encontrar acomodação para alugar em Ubatuba.</strong> As melhores opções esgotam rápido, por isso reserve o quanto antes.</p>
+    </div>
+    <a href="#" class="btn btn--wa btn--sm-arrowless btn--lg" data-wa="Olá! Vim pelo site e quero garantir uma acomodação para a alta temporada em Ubatuba. Podem me ajudar com disponibilidade e valores?">
+      <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Garantir a minha agora
+    </a>
+  </div>
+</section>
+
+<section class="sec sec--tint" id="como-reservar">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow eyebrow--dark">Como reservar</p>
+      <h2>Simples, direto e sem intermediários</h2>
+    </div>
+    <ol class="steps">
+      <li><span>1</span><h3>Escolha</h3><p>Veja as fotos e escolha a casa ou o apartamento ideal para o seu grupo.</p></li>
+      <li><span>2</span><h3>Chame no WhatsApp</h3><p>Toque no botão da acomodação. A mensagem já vai pronta, é só enviar com as datas.</p></li>
+      <li><span>3</span><h3>Combine com o proprietário</h3><p>Disponibilidade, valores e pagamento tratados direto, sem complicação.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec" id="praia-grande">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow eyebrow--dark">A localização</p>
+      <h2>Praia Grande, Ubatuba</h2>
+      <p>A Praia Grande é uma das praias mais procuradas do litoral norte paulista: extensa, com comércio, restaurantes e quiosques por perto e fácil acesso às outras praias da cidade.</p>
+      <p>Nossas acomodações ficam na Praia Grande, entre a Praia Grande e o Tenório e no Centro de Ubatuba, várias delas a cerca de 100 metros da areia.</p>
+    </div>
+    <ul class="ticks">
+      <li>Casas para grupos, famílias e excursões</li>
+      <li>Apartamentos e kitnets para casais e pequenas famílias</li>
+      <li>Opções com piscina, churrasqueira e ar-condicionado</li>
+      <li>Atendimento direto com o proprietário</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec sec--sand" id="depoimentos">
+  <div class="wrap">
+    <div class="sec__head">
+      <p class="eyebrow eyebrow--dark">Depoimentos</p>
+      <h2>Quem já se hospedou recomenda</h2>
+      <p class="muted">Mais de 10 mil hóspedes já passaram suas férias em Ubatuba com a Célio Locações.</p>
+    </div>
+    <div class="quotes" id="quotes"></div>
+  </div>
+</section>
+
+<section class="sec sec--teal" id="contato">
+  <div class="wrap contact">
+    <div>
+      <p class="eyebrow eyebrow--light">Contato</p>
+      <h2>Vamos planejar a sua temporada?</h2>
+      <p>Fale agora com o Célio e confira a disponibilidade para as suas datas.</p>
+      <a href="#" class="btn btn--wa btn--xl" data-wa="Olá! Vim pelo site e gostaria de informações sobre locação para temporada em Ubatuba.">
+        <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Reservar pelo WhatsApp
+      </a>
+    </div>
+    <ul class="contact__list">
+      <li><span>WhatsApp</span><a id="c-wa1" href="#"></a><a id="c-wa2" href="#"></a></li>
+      <li><span>Telefone</span><a id="c-tel" href="#"></a></li>
+      <li><span>E-mail</span><a id="c-mail" href="#"></a></li>
+      <li><span>Instagram</span><a id="c-ig" href="#"></a></li>
+      <li><span>Endereço</span>Ubatuba – Praia Grande · SP</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">© <span id="ano"></span> Ubatuba Célio Locações · Ubatuba/SP</div>
+</footer>
+
+<a class="fab" href="#" data-wa="Olá! Vim pelo site e gostaria de informações sobre locação para temporada em Ubatuba.">
+  <svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg><span>Fale com o proprietário</span>
+</a>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Galeria de fotos">
+  <button class="lb__x" id="lbX" aria-label="Fechar">✕</button>
+  <button class="lb__nav lb__prev" id="lbP" aria-label="Foto anterior">‹</button>
+  <figure class="lb__fig"><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+  <button class="lb__nav lb__next" id="lbN" aria-label="Próxima foto">›</button>
+  <a class="btn btn--wa btn--lg lb__wa" id="lbWa" href="#"><svg class="ico" viewBox="0 0 24 24"><use href="#i-wa"/></svg> Reservar pelo WhatsApp</a>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+</defs></svg>
+
+<!--SCRIPTS--><script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script><!--/SCRIPTS-->
+</body>
+</html>
