@@ -127,8 +127,12 @@
   var heroEl = document.querySelector(".hero"), fabEl = document.querySelector(".fab");
   function onScroll() {
     top.classList.toggle("is-small", window.scrollY > 60);
-    // botão flutuante (celular): aparece só depois que o hero sai da tela
-    if (fabEl && heroEl) fabEl.classList.toggle("is-visible", heroEl.getBoundingClientRect().bottom < 90);
+    // botão flutuante (celular): aparece depois que o hero sai da tela e some quando chega no contato
+    if (fabEl && heroEl) {
+      var contatoEl = document.getElementById("contato");
+      var noContato = contatoEl && contatoEl.getBoundingClientRect().top < window.innerHeight * 0.85;
+      fabEl.classList.toggle("is-visible", heroEl.getBoundingClientRect().bottom < 90 && !noContato);
+    }
   }
   window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
