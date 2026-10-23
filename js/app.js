@@ -124,7 +124,12 @@
 
   // Header encolhe ao rolar
   var top = document.getElementById("topo");
-  function onScroll() { top.classList.toggle("is-small", window.scrollY > 60); }
+  var heroEl = document.querySelector(".hero"), fabEl = document.querySelector(".fab");
+  function onScroll() {
+    top.classList.toggle("is-small", window.scrollY > 60);
+    // botão flutuante (celular): aparece só depois que o hero sai da tela
+    if (fabEl && heroEl) fabEl.classList.toggle("is-visible", heroEl.getBoundingClientRect().bottom < 90);
+  }
   window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
   // Números da faixa laranja: contam de 0 até o valor quando a faixa aparece na tela.

@@ -256,6 +256,9 @@ h1, h2, h3 { text-wrap: balance; overflow-wrap: break-word; }
   /* botão de reserva fixo no celular */
   .fab { left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); height: 56px; border-radius: 14px; justify-content: center; font-size: 1rem; box-shadow: 0 12px 30px -8px rgba(15, 122, 62, .75), 0 0 0 1px rgba(255, 255, 255, .15) inset; }
   .fab::before { display: none; }
+  /* no celular, o botão só aparece depois da primeira tela (hero) */
+  .fab { animation: none; opacity: 0; transform: translateY(24px); pointer-events: none; visibility: hidden; transition: opacity .35s ease, transform .35s ease, visibility 0s linear .35s, background-color .25s; }
+  .fab.is-visible { opacity: 1; transform: none; pointer-events: auto; visibility: visible; transition-delay: 0s; }
   .fab span { max-width: none; margin-left: .65rem; }
   .foot { padding-bottom: 86px; }
   .lb { grid-template-columns: 1fr; padding: 12px; }
