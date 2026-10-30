@@ -3,11 +3,12 @@
   var grid = document.getElementById("grid");
   var state = { tipo: "todos", pessoas: 0 };
 
-  function waLink(msg) { return "https://wa.me/" + S.whatsapp + "?text=" + encodeURIComponent(msg); }
+  // Campos para o cliente preencher no WhatsApp (facilita o atendimento do proprietário)
+  var CAMPOS = "\n\n*Nome:* \n*Data de entrada:* \n*Data de saída:* \n*Quantidade de pessoas:* ";
+  function waLink(msg) { return "https://wa.me/" + S.whatsapp + "?text=" + encodeURIComponent(msg + CAMPOS); }
   function nome(a) { return a.nome + (a.variante ? " (" + a.variante + ")" : ""); }
   function waMsg(a) {
-    return "Olá! Vim pelo site e tenho interesse na acomodação *" + nome(a) + "* (até " + a.pessoas +
-      " pessoas) em Ubatuba. Gostaria de saber sobre disponibilidade e valores para as datas: ";
+    return "Olá! Vim pelo site e tenho interesse na acomodação *" + nome(a) + "* em Ubatuba. Gostaria de saber sobre disponibilidade e valores.";
   }
   function foto(a, i) { return "img/" + a.slug + "/" + String(i).padStart(2, "0") + ".jpg"; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
