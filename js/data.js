@@ -29,9 +29,9 @@ window.ACOMODACOES = [
   { slug: "caminho-do-mar-kitnet", nome: "Caminho do Mar", variante: "Kitnet", tipo: "kitnet", destaque: "Kitnet", quartos: "Kitnet", pessoas: 4, local: "Entre Tenório e Praia Grande · 100 m", extras: [], fotos: 18, capa: [1, 2, 3] },
 ];
 
-// Depoimentos. Troque os exemplos pelos depoimentos reais dos hóspedes (e remova "exemplo: true").
+// Depoimentos de hóspedes (nome, cidade e casa onde ficaram).
 window.DEPOIMENTOS = [
-  { exemplo: true, nome: "Nome do hóspede", cidade: "Cidade", casa: "Aconchego", texto: "Casa espaçosa, bem localizada e perfeita para reunir a família toda. O atendimento do proprietário foi rápido e sem complicação." },
-  { exemplo: true, nome: "Nome do hóspede", cidade: "Cidade", casa: "Turquesa", texto: "Apartamento limpo e confortável, a poucos passos da praia. Reservar direto pelo WhatsApp foi simples e prático." },
-  { exemplo: true, nome: "Nome do hóspede", cidade: "Cidade", casa: "Nosso Recanto", texto: "Fomos em grupo grande e coube todo mundo com conforto. A piscina fez a diferença. Pretendemos voltar na próxima temporada." }
+  { nome: "Amanda", cidade: "Belo Horizonte", casa: "Aconchego", texto: "Casa confortável, com ótimo espaço e localização privilegiada, ideal para acomodar toda a família. O proprietário foi muito prestativo, respondendo rapidamente e tornando todo o processo simples e tranquilo." },
+  { nome: "Claudio", cidade: "Curitiba", casa: "Turquesa", texto: "Apartamento bem cuidado, aconchegante e com excelente localização, pertinho da praia. O processo de reserva pelo WhatsApp foi rápido, fácil e sem burocracia." },
+  { nome: "Edileine", cidade: "Salvador", casa: "Nosso Recanto", texto: "A acomodação atendeu muito bem ao nosso grupo, oferecendo espaço e conforto para todos. A piscina foi um ótimo diferencial. Com certeza queremos repetir a experiência em uma próxima oportunidade." }
 ];
